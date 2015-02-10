@@ -4,7 +4,7 @@ defmodule ElixirWebsocket.Mixfile do
   def project do
     [app: :elixir_websocket,
      version: "0.0.1",
-     elixir: "~> 1.0",
+     elixir: "~> 1.0.2",
      elixirc_paths: ["lib", "web"],
      compilers: [:phoenix] ++ Mix.compilers,
      deps: deps]
@@ -23,6 +23,8 @@ defmodule ElixirWebsocket.Mixfile do
   # Type `mix help deps` for examples and options
   defp deps do
     [{:phoenix, github: "phoenixframework/phoenix"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:coffee_rotor, "~> 0.2.1"},
+     {:rotor, github: "HashNuke/rotor", override: true}]
   end
 end

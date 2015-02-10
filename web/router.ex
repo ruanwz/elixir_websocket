@@ -4,7 +4,7 @@ defmodule ElixirWebsocket.Router do
 
   socket "/ws" do
     #channel "chats:*", ChatChannel
-    channel "*", ChatChannel
+    channel "chats:*", ChatChannel
   end
 
   pipeline :browser do
