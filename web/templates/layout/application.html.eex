@@ -7,17 +7,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Phoenix!</title>
+    <title>Hello Websocket Chat!</title>
     <link rel="stylesheet" href="/css/phoenix.css">
     <script type="text/javascript" src="js/phoenix.js"> </script>
-    <script type="text/javascript" src="js/home-bundle.js"> </script>
   </head>
 
   <body>
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
+          <li><a href="#">Help</a></li>
         </ul>
         <span class="logo"></span>
       </div>
@@ -30,4 +29,6 @@
 
     </div> <!-- /container -->
   </body>
+
+  <script type="text/javascript" src="js/home-bundle.js"> </script>
 </html>

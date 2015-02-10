@@ -25,6 +25,8 @@ defmodule ElixirWebsocket.Mixfile do
     [{:phoenix, github: "phoenixframework/phoenix"},
      {:cowboy, "~> 1.0"},
      {:coffee_rotor, "~> 0.2.1"},
-     {:rotor, github: "HashNuke/rotor", override: true}]
+     {:rotor, github: "HashNuke/rotor", override: true},
+     {:exrm, "~> 0.14.16"}
+    ]
   end
 end

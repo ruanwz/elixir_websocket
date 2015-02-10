@@ -9,7 +9,8 @@ use Mix.Config
 config :elixir_websocket, ElixirWebsocket.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "JR5tZ2d6HCWYJo+ZfVH0fWqKcF90ru1l+upA/7fA2j/ELqNBv3ELEy7814lpTVO/",
-  debug_errors: false
+  debug_errors: false,
+  server: true
 
 # Configures Elixir's Logger
 config :logger, :console,
