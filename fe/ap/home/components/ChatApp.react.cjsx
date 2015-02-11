@@ -1,8 +1,15 @@
-require '../less/material.less'
+#require '../less/material.less'
+require '../css/bootstrap.css'
 React = require("react")
 injectTapEventPlugin = require("react-tap-event-plugin")
 injectTapEventPlugin()
 mui = require("material-ui")
+ListGroup = require("react-bootstrap/ListGroup")
+ListGroupItem = require("react-bootstrap/ListGroupItem")
+Input = require("react-bootstrap/Input")
+Grid = require("react-bootstrap/Grid")
+Row = require("react-bootstrap/Row")
+Col = require("react-bootstrap/Col")
 RaisedButton = mui.RaisedButton
 DatePicker = mui.DatePicker
 DropDownMenu = mui.DropDownMenu
@@ -19,22 +26,27 @@ ChatApp = React.createClass
     window.message_callback = @_onChange
   render: ->
     <div>
-      <div id="messages">
-        Hello
-        <ul>
-          {this.build_message message for message in this.state.messages}
-        </ul>
+      <Grid>
+        <Row>
+          <div id="messages">
+            <ListGroup>
+              {this.build_message message for message in this.state.messages}
+            </ListGroup>
 
-      </div>
-
-      <textarea value={@state.text} onChange={@_onTextChange} onKeyDown={@_onKeyDown}></textarea>
-      <br/>
-      <label>From</label>
-      <input type="text" value={@state.author} onChange={@_onAuthorChange}></input>
+          </div>
+        </Row>
+        <Row>
+          <Col xs={6} md={4}>
+            <Input type="text" label="From" placeholder="enter your name" value={@state.author} onChange={@_onAuthorChange}></Input>
+          </Col>
+        </Row>
+        <Row>
+          <Input type="textarea" label="Message" placeholder="You say ..." value={@state.text} onChange={@_onTextChange} onKeyDown={@_onKeyDown}></Input>
+        </Row>
+      </Grid>
     </div>
   build_message: (message)->
-    <div>{message.user || "someone"}: {message.body}</div>
-
+    <ListGroupItem>{message.user || "someone"}: {message.body}</ListGroupItem>
   _onChange: ->
     @setState messages: window.messages
   _onAuthorChange: (event, value)->

@@ -17,7 +17,8 @@ module.exports = {
         { test: /\.jsx$/, loader: "jsx-loader?harmony" },
         { test: /\.cjsx$/, loader: "coffee-jsx-loader" },
         { test: /\.less$/,   loader: "style-loader!css-loader!less-loader"},
-        { test: /\.(eot|woff)$/,   loader: "url-loader?prefix=font/&limit=5000" },
+        { test: /\.css$/,   loader: "style-loader!css-loader"},
+        { test: /\.(eot|woff|svg|ttf|woff2)$/,   loader: "url-loader?prefix=font/&limit=5000" },
     ]
   },
   resolve: {
